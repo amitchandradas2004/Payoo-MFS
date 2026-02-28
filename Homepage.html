@@ -34,29 +34,13 @@
     </style>
   </head>
   <body class="min-h-screen max-w-md bg-base-200 mx-auto">
-    <header class="border-b-2 border-gray-200">
-      <div class="flex justify-between px-5 py-2">
-        <div>
-          <h2>9:41</h2>
-        </div>
-        <div>
-          <span
-            ><i class="fa-solid fa-signal" style="color: rgb(0, 0, 0)"></i
-          ></span>
-          <span
-            ><i class="fa-solid fa-wifi" style="color: rgb(0, 0, 0)"></i
-          ></span>
-          <span
-            ><i class="fa-solid fa-battery-full" style="color: rgb(0, 0, 0)"></i
-          ></span>
-        </div>
-      </div>
+    <header class="border-b-2 border-gray-200 sticky top-0 z-10 bg-base-200">
       <nav class="flex justify-between items-center px-5 py-2">
         <div class="flex gap-1">
           <img src="./assets/logo.png" class="w-15 h-12" />
           <div class="balance-info">
             <h2 class="text-2xl font-bold">
-              <span id="balance">0.00</span> taka
+              <span id="balance">1000</span> taka
             </h2>
             <p class="text-neutral/50">Available Balance</p>
           </div>
@@ -82,7 +66,6 @@
           is low and
         </p>
       </div>
-
       <div class="buttons grid grid-cols-3 gap-5 px-5 py-2">
         <button
           class="text-center h-full flex-col rounded-xl p-5 btn btn-primary/80 btn-soft"
@@ -122,5 +105,46 @@
         </button>
       </div>
     </section>
+    <section id="cashout" class="w-11/12 mx-auto py-5">
+      <h2 class="text-2xl font-bold Outfit mb-5">Cash Out</h2>
+      <div class="card bg-base-100 w-full shadow-sm rounded-3xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-neutral font-bold">Agent Number</label>
+            <input
+              id="cashout-number"
+              maxlength="11"
+              minlength="11"
+              type="number"
+              value="01234567890"
+              class="input rounded-full bg-base-200 outline-none w-full"
+              placeholder="Enter 11 digit number"
+            />
+            <label class="label text-neutral font-bold">Amount</label>
+            <input
+              id="cashout-amount"
+              maxlength="6"
+              minlength="3"
+              type="number"
+              class="input rounded-full bg-base-200 outline-none w-full"
+              placeholder="Enter amount to withdraw"
+            />
+            <label class="label text-neutral font-bold pt-3">Pin Number</label>
+            <input
+              id="cashout-pin"
+              maxlength="4"
+              minlength="4"
+              type="password"
+              class="input rounded-full bg-base-200 outline-none w-full"
+              placeholder="Enter 4 digit pin number"
+            />
+            <button id="cashout-btn" class="btn btn-primary mt-4 rounded-full">
+              Withdraw Money
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+    <script src="script/cashout.js"></script>
   </body>
 </html>
