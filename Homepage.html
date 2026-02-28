@@ -1,11 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1>HomePage</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo | HomePage</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+    <!-- Daisy UI + tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        font-family: "Outfit";
+      }
+    </style>
+  </head>
+  <body class="min-h-screen max-w-md bg-base-200 mx-auto">
+    <header class="border-b-2 border-gray-200">
+      <div class="flex justify-between px-5 py-2">
+        <div>
+          <h2>9:41</h2>
+        </div>
+        <div>
+          <span
+            ><i class="fa-solid fa-signal" style="color: rgb(0, 0, 0)"></i
+          ></span>
+          <span
+            ><i class="fa-solid fa-wifi" style="color: rgb(0, 0, 0)"></i
+          ></span>
+          <span
+            ><i class="fa-solid fa-battery-full" style="color: rgb(0, 0, 0)"></i
+          ></span>
+        </div>
+      </div>
+      <nav class="flex justify-between items-center px-5 py-2">
+        <div class="flex gap-1">
+          <img src="./assets/logo.png" class="w-15 h-12" />
+          <div class="balance-info">
+            <h2 class="text-2xl font-bold">
+              <span id="balance">0.00</span> taka
+            </h2>
+            <p class="text-neutral/50">Available Balance</p>
+          </div>
+        </div>
+        <div class="btn btn-soft">
+          <span
+            ><i
+              class="fa-solid fa-arrow-right-from-bracket fa-rotate-180 opacity-60"
+              style="color: rgb(0, 0, 0)"
+            ></i
+          ></span>
+          <a href="./index.html" class="opacity-60">Log Out</a>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div class="space-y-5 py-10 px-5">
+        <h2 class="text-3xl outfit font-bold">
+          Welcome to Pay<span class="text-primary">oo</span>
+        </h2>
+        <p class="text-neutral/50">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+      </div>
+
+      <div class="buttons grid grid-cols-3 gap-5 px-5 py-2">
+        <button
+          class="text-center h-full flex-col rounded-xl p-5 btn btn-primary/80 btn-soft"
+        >
+          <img src="./assets/opt-1.png" class="mx-auto" />
+          <p class="text-neutral/50 pt-2">Add Money</p>
+        </button>
+        <button
+          class="text-center h-full flex-col rounded-xl p-5 btn btn-primary/80 btn-soft"
+        >
+          <img src="./assets/opt-2.png" class="mx-auto" />
+          <p class="text-neutral/50 pt-2">Cashout</p>
+        </button>
+        <button
+          class="text-center h-full flex-col rounded-xl p-5 btn btn-primary/80 btn-soft"
+        >
+          <img src="./assets/opt-3.png" class="mx-auto" />
+          <p class="text-neutral/50 pt-2">Transfer Money</p>
+        </button>
+        <button
+          class="text-center h-full flex-col rounded-xl p-5 btn btn-primary/80 btn-soft"
+        >
+          <img src="./assets/opt-4.png" class="mx-auto" />
+          <p class="text-neutral/50 pt-2">Get Bonus</p>
+        </button>
+        <button
+          class="text-center h-full flex-col rounded-xl p-5 btn btn-primary/80 btn-soft"
+        >
+          <img src="./assets/opt-5.png" class="mx-auto" />
+          <p class="text-neutral/50 pt-2">Pay Bill</p>
+        </button>
+        <button
+          class="text-center h-full flex-col rounded-xl p-5 btn btn-primary/80 btn-soft"
+        >
+          <img src="./assets/opt-6.png" class="mx-auto" />
+          <p class="text-neutral/50 pt-2">Transactions</p>
+        </button>
+      </div>
+    </section>
+  </body>
 </html>
