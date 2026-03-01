@@ -8,10 +8,11 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   // 2: Get the withrawal amount and convert to number
   const cashoutAmount = getValueFromInput("cashout-amount");
   // 3: Get the current balance and convert to number
-  const balanceElement = document.getElementById("balance");
-  const balance = balanceElement.innerText;
+  const currentBalnce = getBalance();
+  // const balanceElement = document.getElementById("balance");
+  // const balance = balanceElement.innerText;
   // 4: Calculate the new balance
-  const newBalance = Number(balance) - Number(cashoutAmount);
+  const newBalance = currentBalnce - Number(cashoutAmount);
   if (newBalance < 0) {
     alert("Invalid Amount");
     return;
@@ -20,7 +21,8 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
   const cashoutPin = getValueFromInput("cashout-pin");
   if (cashoutPin === "1234") {
     alert("Cash Out Succesful");
-    balanceElement.innerText = newBalance;
+    // document.getElementById('balance').innerText = newBalance;
+    setBalance(newBalance);
   } else {
     alert("Invalid pin");
     return;
