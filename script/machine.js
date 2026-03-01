@@ -15,5 +15,19 @@ function getBalance() {
 // Machine value -> set balance
 function setBalance(value) {
   const balanceElement = document.getElementById("balance");
-  balanceElement.innerText = value
+  balanceElement.innerText = value;
+}
+
+// machine id -> hide all -> show specfic id
+function showOnly(id) {
+  const addmoney = document.getElementById("addmoney");
+  const cashout = document.getElementById("cashout");
+  // console.log(`add money - ${addmoney} , cashout- ${cashout}`);
+
+  // hide all
+  addmoney.classList.add("hidden");
+  cashout.classList.add("hidden");
+  // show only if it contains the id element
+  const selected = document.getElementById(id);
+  selected.classList.remove("hidden");
 }

@@ -68,12 +68,14 @@
       </div>
       <div class="buttons grid grid-cols-3 gap-5 px-5 py-2">
         <button
+          onclick="showOnly('addmoney')"
           class="text-center h-full flex-col rounded-xl p-5 btn btn-primary/80 btn-soft"
         >
           <img src="./assets/opt-1.png" class="mx-auto" />
           <p class="text-neutral/50 pt-2">Add Money</p>
         </button>
         <button
+          onclick="showOnly('cashout')"
           class="text-center h-full flex-col rounded-xl p-5 btn btn-primary/80 btn-soft"
         >
           <img src="./assets/opt-2.png" class="mx-auto" />
@@ -107,7 +109,7 @@
     </section>
 
     <!-- Add money section -->
-    <section id="addmoney" class="w-11/12 mx-auto py-5">
+    <section id="addmoney" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-2xl font-bold Outfit mb-5">Add Money</h2>
       <div class="card bg-base-100 w-full shadow-sm rounded-3xl">
         <div class="card-body">
