@@ -19,21 +19,19 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
     return;
   }
   // 3: Get the amount to add
-  const addAmount = getValueFromInput("add-money-amount");
-  if (addAmount >= 100 && addAmount <= 999999) {
-    alert("Enter an amount of minumum 100 and maximum 999999.");
-    return;
-  }
-  // if (addAmount.length <= 6) {
-  //   alert("Enter an amount of maximun 6 digits of numbers.");
+  const addAmount = Number(getValueFromInput("add-money-amount"));
+  const addNewBalance = getBalance() + Number(addAmount);
+  // if (addAmount < 100 || addAmount > 999999) {
+  //   alert("Enter an amount minimum 100 and maximum 999999.");
   //   return;
   // }
-  const addNewBalance = getBalance() + Number(addAmount);
 
   // 4: Get the pin and set new balance:
   const addmoneyPin = getValueFromInput("add-money-pin");
   if (addmoneyPin === "1234") {
-    alert("Add money Succesful!");
+    alert(`Add Money Success from 
+      ${bankAccount} 
+      at ${new Date()}`);
     setBalance(addNewBalance);
   } else {
     alert("Invalid Pin");
