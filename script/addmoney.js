@@ -21,11 +21,6 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
   // 3: Get the amount to add
   const addAmount = Number(getValueFromInput("add-money-amount"));
   const addNewBalance = getBalance() + Number(addAmount);
-  // if (addAmount < 100 || addAmount > 999999) {
-  //   alert("Enter an amount minimum 100 and maximum 999999.");
-  //   return;
-  // }
-
   // 4: Get the pin and set new balance:
   const addmoneyPin = getValueFromInput("add-money-pin");
   if (addmoneyPin === "1234") {
@@ -33,6 +28,17 @@ document.getElementById("add-money-btn").addEventListener("click", function () {
       ${bankAccount} 
       at ${new Date()}`);
     setBalance(addNewBalance);
+    // 1: Get the history-container
+    const history = document.getElementById("history-container");
+    // 2: Create new div
+    const newHistory = document.createElement("div");
+    // 3: Add innerHTML in new div
+    newHistory.innerHTML = `
+    <div class="transtion-card px-5 py-3 w-full rounded-3xl bg-[#624ede] text-white font-semibold mb-2">
+    Add Money Success from ${bankAccount} Account No: ${accountNumber} at ${new Date()}</div>
+    `;
+    // 4: Append new div in the history-container
+    history.append(newHistory);
   } else {
     alert("Invalid Pin");
     return;

@@ -24,6 +24,17 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
       alert("Cash Out Succesful");
       // document.getElementById('balance').innerText = newBalance;
       setBalance(newBalance);
+      // 1: Get the history-container
+      const history = document.getElementById("history-container");
+      // 2: Create new div
+      const newHistory = document.createElement("div");
+      // 3: Add innerHTML in new div
+      newHistory.innerHTML = `
+    <div class="transtion-card px-5 py-3 w-full rounded-3xl bg-[#624ede] text-white font-semibold mb-2">
+    CashOut ${cashoutAmount} Taka Success to ${cashoutNumber} , at ${new Date()}</div>
+    `;
+      // 4: Append new div in the history-container
+      history.append(newHistory);
     }
   } else {
     alert("Invalid pin");
