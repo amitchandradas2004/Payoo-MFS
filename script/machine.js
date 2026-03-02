@@ -17,15 +17,23 @@ function setBalance(value) {
   const balanceElement = document.getElementById("balance");
   balanceElement.innerText = value;
 }
+
+// Button Switch Section Here:
 // machine id -> hide all -> show specfic id
 function showOnly(id) {
   const addmoney = document.getElementById("addmoney");
   const cashout = document.getElementById("cashout");
   const history = document.getElementById("history");
+  const transfer = document.getElementById("transfer-money");
+  const getBonus = document.getElementById("get-bonus");
+  const payBill = document.getElementById("pay-bill");
   // hide all
   addmoney.classList.add("hidden");
   cashout.classList.add("hidden");
   history.classList.add("hidden");
+  transfer.classList.add("hidden");
+  getBonus.classList.add("hidden");
+  payBill.classList.add("hidden");
   // show only if it contains the id element
   const selected = document.getElementById(id);
   selected.classList.remove("hidden");

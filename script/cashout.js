@@ -36,6 +36,7 @@ document.getElementById("cashout-btn").addEventListener("click", function () {
       // 4: Append new div in the history-container
       history.append(newHistory);
     }
+  
   } else {
     alert("Invalid pin");
     return;
