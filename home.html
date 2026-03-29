@@ -226,12 +226,6 @@
       </div>
     </section>
 
-    <!-- Transtions History section -->
-    <section id="history" class="w-11/12 mx-auto py-5 hidden">
-      <h2 class="text-2xl font-bold Outfit mb-5">Transaction History</h2>
-      <div id="history-container"></div>
-    </section>
-
     <!-- Transfer Money Section -->
     <section id="transfer-money" class="w-11/12 mx-auto py-5 hidden">
       <h2 class="text-2xl font-bold Outfit mb-5">Transfer Money</h2>
@@ -274,34 +268,6 @@
               class="btn btn-primary mt-4 rounded-full"
             >
               Send Now
-            </button>
-          </fieldset>
-        </div>
-      </div>
-    </section>
-
-    <!-- Get Bonus Section -->
-    <section id="get-bonus" class="w-11/12 mx-auto py-5 hidden">
-      <h2 class="text-2xl font-bold Outfit mb-5">Get Bonus</h2>
-      <div class="card bg-base-100 w-full shadow-sm rounded-3xl">
-        <div class="card-body">
-          <fieldset class="fieldset">
-            <label class="label text-neutral font-bold"
-              >Enter Bonus Coupon</label
-            >
-            <input
-              id="bonus-number"
-              maxlength=""
-              type="text"
-              class="input rounded-full bg-base-200 outline-none w-full"
-              placeholder="Enter your coupon code"
-            />
-            <button
-              id="bonus-btn"
-              type="submit"
-              class="btn btn-primary mt-4 rounded-full"
-            >
-              Get Bonus
             </button>
           </fieldset>
         </div>
@@ -369,6 +335,51 @@
           </fieldset>
         </div>
       </div>
+    </section>
+
+    <!-- Get Bonus Section -->
+    <section id="get-bonus" class="w-11/12 mx-auto py-5 hidden">
+      <h2 class="text-2xl font-bold Outfit mb-5">Get Bonus</h2>
+      <div class="card bg-base-100 w-full shadow-sm rounded-3xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label text-neutral font-bold"
+              >Enter Bonus Coupon</label
+            >
+            <input
+              id="bonus-ammout"
+              maxlength=""
+              type="text"
+              class="input rounded-full bg-base-200 outline-none w-full"
+              placeholder="Enter your coupon code (Numbers Only)"
+            />
+            <label class="label text-neutral font-bold"
+              >Enter Your Pin Number</label
+            >
+            <input
+              id="bonus-pin"
+              maxlength=""
+              type="text"
+              class="input rounded-full bg-base-200 outline-none w-full"
+              placeholder="Enter Your Pin Number"
+            />
+
+            <button
+              id="bonus-btn"
+              type="submit"
+              class="btn btn-primary mt-4 rounded-full"
+            >
+              Get Bonus
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transtions History section -->
+    <section id="history" class="w-11/12 mx-auto py-5 hidden">
+      <h2 class="text-2xl font-bold Outfit mb-5">Transaction History</h2>
+      <div id="history-container"></div>
     </section>
 
     <!-- All Scripts -->
