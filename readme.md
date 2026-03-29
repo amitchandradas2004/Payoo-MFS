@@ -52,27 +52,3 @@ PAYOO is a smart Mobile Financial Services (MFS) interface that provides a seaml
     </tr>
     
 </table>
-
-## How to use
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/ProgrammingHero1/payoo-resources.git
-```
-
-### 2. Install Dependencies
-
-Copy the project assets and set up required CDNs:
-
-- **Tailwind CSS** - Add to `<head>`:
-
-
-- **DaisyUI** - Add after Tailwind:
-
-
-- **Font Awesome** - Add Font Awesome icons:
-
-
-### 3. Start Building the Application
-
